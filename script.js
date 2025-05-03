@@ -8,48 +8,45 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
     icon.classList.toggle('fa-eye');
     icon.classList.toggle('fa-eye-slash');
 });
-document.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from submitting
 
-    let isValid = true;
+document.querySelector('.submit').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent form submission
 
-    // Get input values
-    const idInput = document.getElementById('id');
-    const userInput = document.getElementById('user');
-    const passwordInput = document.getElementById('password');
+    const id = document.getElementById('id').value.trim();
+    const user = document.getElementById('user').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const loginButton = this;
 
-    // Clear previous error messages
-    document.querySelectorAll('.error-message').forEach(error => error.remove());
+    // Reset error messages
+    document.getElementById('id-error').style.display = 'none';
+    document.getElementById('user-error').style.display = 'none';
+    document.getElementById('password-error').style.display = 'none';
 
-    // Validate 身分證字號
-    if (idInput.value.trim() === '') {
-        showError(idInput, '身分證字號為必填');
-        isValid = false;
+    // Validate inputs
+    let hasError = false;
+
+    if (!id) {
+        document.getElementById('id-error').style.display = 'block';
+        hasError = true;
+    }
+    if (!user) {
+        document.getElementById('user-error').style.display = 'block';
+        hasError = true;
+    }
+    if (!password) {
+        document.getElementById('password-error').style.display = 'block';
+        hasError = true;
     }
 
-    // Validate 用戶代號
-    if (userInput.value.trim() === '' || userInput.value.length < 6 || userInput.value.length > 12) {
-        showError(userInput, '用戶代號需為6至12位英數混合');
-        isValid = false;
-    }
-
-    // Validate 網銀密碼
-    if (passwordInput.value.trim() === '' || passwordInput.value.length < 6 || passwordInput.value.length > 16) {
-        showError(passwordInput, '密碼需為6至16位英數混合');
-        isValid = false;
-    }
-
-    // If all inputs are valid, simulate login
-    if (isValid) {
-        const hardcodedUser = 'testuser';
-        const hardcodedPassword = 'testpassword';
-
-        if (userInput.value === hardcodedUser && passwordInput.value === hardcodedPassword) {
-            alert('登入成功！');
-            // Redirect to another page (e.g., dashboard.html)
-            window.location.href = 'dashboard.html';
-        } else {
-            alert('用戶代號或密碼錯誤');
-        }
+    if (hasError) {
+        loginButton.disabled = false; // Re-enable the button
+    } else {
+        alert('登入成功，注意:此為詐騙網頁');
+        // Proceed with login logic
+        window.location.href = 'https://www.cathay-cube.com.tw/cathaybk';
     }
 });
+
+function showAlert(message) {
+    alert(message);
+}

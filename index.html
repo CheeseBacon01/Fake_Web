@@ -11,7 +11,9 @@
 <body>
 
 <header>
-    <img src="img/logo.svg" alt="國泰世華銀行與CUBE Logo" class="logo">
+    <a href="https://www.cathay-cube.com.tw/cathaybk">
+        <img src="img/logo.svg" alt="國泰世華銀行與CUBE Logo" class="logo">
+    </a>
 </header>
 
 <div class="container">
@@ -29,6 +31,7 @@
             <div class="input-wrap">
                 <input type="text" id="id">
             </div>
+            <span class="error-message" id="id-error">請輸入身分證字號</span>
 
             <span>用戶代號</span>
             <div class="input-wrap">
@@ -37,6 +40,7 @@
                     <i class="fas fa-eye-slash"></i> <!-- Default closed eye icon -->
                 </span>
             </div>
+            <span class="error-message" id="user-error">請輸入6至12位用戶代號英數混合</span>
 
             <span>網銀密碼</span>
             <div class="input-wrap">
@@ -45,9 +49,10 @@
                     <i class="fas fa-eye-slash"></i>
                 </span>
             </div>
+            <span class="error-message" id="password-error">請輸入6至16位密碼英數混合</span>
 
             <div class="help-links">
-                <a href="#">申請/重設網銀密碼</a>
+                <a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">申請/重設網銀密碼</a>
             </div>
 
             <button type="submit" class="submit">登入</button>
@@ -56,9 +61,9 @@
 
     <footer>
         <div class="footer-links">
-            <a href="#">晶片金融卡登入</a>
-            <a href="#">我要開戶</a>
-            <a href="#">常見問題</a>
+            <a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">晶片金融卡登入</a>
+            <a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">我要開戶</a>
+            <a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">常見問題</a>
         </div>
     </footer>
 </div>
@@ -66,11 +71,13 @@
 <div class="footer-section">
     <div class="footer-content">
         <ul class="footer-links">
-            <img src="img/logo.svg" alt="Logo" class="footer-logo">
-            <li><a href="#">公告訊息</a></li>
-            <li><a href="#">友善個人網銀</a></li>
-            <li><a href="#">聯絡我們</a></li>
-            <li><a href="#">服務據點</a></li>
+            <li><a href="https://www.cathay-cube.com.tw/cathaybk">
+                <img src="img/logo.svg" alt="國泰世華銀行與CUBE Logo" class="logo">
+            </a></li>
+            <li><a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">公告訊息</a></li>
+            <li><a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">友善個人網銀</a></li>
+            <li><a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">聯絡我們</a></li>
+            <li><a href="#" onclick="showAlert('此為詐騙網站，不支援跳轉連結')">服務據點</a></li>
         </ul>
     </div>
 </div>
