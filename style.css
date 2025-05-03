@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100px; /* Adjust as needed */
+    height: 100px;
 }
 
 .logo {
@@ -97,8 +97,18 @@ form label {
     color: #26a862;
     font-size: 1.2rem;
 }
+.input-wrap .toggle-password2 {
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+    color: #26a862;
+    font-size: 1.2rem;
+}
 
 .input-wrap .toggle-password:hover i {
+    color: #26a862;
+}
+.input-wrap .toggle-password2:hover i {
     color: #26a862;
 }
 
@@ -196,7 +206,7 @@ footer {
     margin-top: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     body {
         background-image: url('img/moblie_bg.png');
         background-size: cover;
@@ -229,6 +239,13 @@ footer {
     }
 
     .input-wrap .toggle-password {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .input-wrap .toggle-password2 {
         position: absolute;
         right: 1rem;
         top: 50%;
