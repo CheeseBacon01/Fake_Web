@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('NotoSansTC-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+    background-image: url('img/bg.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.logo {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 70px;
+    box-shadow: 0 0 20px rgba(38, 168, 98, 0.3);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.ID {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ID span {
+    margin-right: auto;
+}
+
+#remember-me {
+    margin-left: auto;
+    accent-color: #26a862;
+}
+
+.input-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.remember-me {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.input-wrap input {
+    flex: 1;
+    padding-right: 2.5rem;
+}
+
+.input-wrap .toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+    color: #26a862;
+    font-size: 1.2rem;
+}
+
+.input-wrap .toggle-password:hover i {
+    color: #26a862;
+}
+
+input::placeholder {
+    opacity: 0.6;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 1.5rem;
+}
+
+.submit {
+    width: 100%;
+    background: #00283d;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.help-links {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.help-links a {
+    color: #26a862;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    color: #26a862;
+    text-decoration: none;
+}
+
+.footer-section {
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #26a862;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('img/moblie_bg.png');
+        background-size: cover;
+        background-position: center;
+    }
+}

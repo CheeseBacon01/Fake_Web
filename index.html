@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CUBE 網路銀行</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <img src="img/logo.svg" alt="國泰世華銀行與CUBE Logo" class="logo">
+</header>
+
+<div class="container">
+
+    <div class="title">CUBE 網路銀行</div>
+
+    <main class="login-box">
+
+        <form>
+            <div class="ID">
+                <span>身分證字號</span>
+                <input type="checkbox" id="remember-me"> 記住我
+            </div>
+
+            <div class="input-wrap">
+                <input type="text" id="id">
+            </div>
+
+            <span>用戶代號</span>
+            <div class="input-wrap">
+                <input type="text" id="user" placeholder="請輸入6至12位用戶代號英數混合">
+                <span class="toggle-password">
+                    <i class="fas fa-eye-slash"></i> <!-- Default closed eye icon -->
+                </span>
+            </div>
+
+            <span>網銀密碼</span>
+            <div class="input-wrap">
+                <input type="password" id="password" placeholder="請輸入6至16位密碼英數混合">
+                <span class="toggle-password">
+                    <i class="fas fa-eye-slash"></i>
+                </span>
+            </div>
+
+            <div class="help-links">
+                <a href="#">申請/重設網銀密碼</a>
+            </div>
+
+            <button type="submit" class="submit">登入</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">晶片金融卡登入</a>
+            <a href="#">我要開戶</a>
+            <a href="#">常見問題</a>
+        </div>
+    </footer>
+</div>
+
+<div class="footer-section">
+    <div class="footer-content">
+        <ul class="footer-links">
+            <img src="img/logo.svg" alt="Logo" class="footer-logo">
+            <li><a href="#">公告訊息</a></li>
+            <li><a href="#">友善個人網銀</a></li>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">服務據點</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
